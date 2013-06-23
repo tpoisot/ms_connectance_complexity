@@ -12,12 +12,13 @@
 
 - combinations
 - no free nodes
+- probability to generate a suitable network
 
 # Simulations
 
-- bipartites
 - unipartites
-- nestedness and modularity
+- explain the procedure
+- give results for average, variance, kurtosis, skewness
 
 # Practical consequences
 
