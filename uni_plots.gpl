@@ -1,20 +1,28 @@
-set terminal pngcairo size 350,262 enhanced font 'Verdana,10'
+set terminal pngcairo size 600,382 enhanced font 'Verdana,10'
 
-set border linewidth 1.5
-set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 7 ps 1.5 # --- blue
+set border linewidth 1.1
+set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 7 ps 0.3 # --- blue
 unset key
 
-set ytics 1
 set tics scale 0.75
+set xlabel 'Effective connectance'
 
 set output 'sim_varcoef.png'
+set ylabel 'Coefficient of variation'
 plot "unipartites.dat" u 1:(sqrt($4)/$3) ls 1
 
 set output 'sim_var.png'
+set ylabel 'Variance'
 plot "unipartites.dat" u 1:4 ls 1
 
 set output 'sim_kurt.png'
+set ylabel 'Kurtosis'
 plot "unipartites.dat" u 1:5 ls 1
 
 set output 'sim_skew.png'
+set ylabel 'Skewness'
 plot "unipartites.dat" u 1:6 ls 1
+
+set output 'sim_power.png'
+set ylabel 'Power-law exponent'
+plot "unipartites.dat" u 1:7 ls 1
