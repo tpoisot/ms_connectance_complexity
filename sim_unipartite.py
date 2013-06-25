@@ -25,7 +25,7 @@ def M(n):
 
 n = 30
 step = 10
-repls = 200
+repls = 500
 
 test_links = np.arange(m(n)*2, M(n), step)
 store_out = np.zeros((len(test_links)*repls,7))

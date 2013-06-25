@@ -95,11 +95,27 @@ expect that the variance of the degree distribution, which is often used
 connectance. The mean, kurtosis, and skewness of the degree distribution
 should all vary in a monotonous way with connectance.
 
-In the simulations below, we use a network of 25 nodes, filled with 30 to $M_{25}$ interactions.
+In the simulations below, we use a network of 30 nodes, filled with 35 to
+$M_{30}$ interactions. The number of edges in the networks increases by steps of
+10, and 500 networks are generated for each number of edges. The graphs
+generated are Erdős-Rényi ones, meaning that every potential interaction has the
+same probability of being realized [@erdos_random_1959]. We use an algorithm
+inspired by @knuth_volume_1997, allowing to fix the number of edges in the
+graph. A total of 19000 networks are generated this way.
 
-- unipartites
-- explain the procedure
-- give results for average, variance, kurtosis, skewness
+For each replicate, we measure the degree of all nodes (the degree
+distribution), and measure its variance, coefficient of variation, kurtosis,
+and skewness. In addition, for each network, we fit a power-law distribution
+on the sorted degree distribution using the least-squares method; we report
+the power-law exponent.
+
+[simstat]: sim_stats.png "title"
+![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results clearly show that central properties of the degree distribution are contingent upon connectance, at a given network size.\label{simstat}][simstat]
+
+With the exception of the kurtosis, *all* statistical descriptors of the degree
+distribution were influenced by the effective connectance (Fig. \ref{simstat}). As predicted in the
+previous part, variance on the degree distribution is hump-shaped with regard to
+connectance ()
 
 # Practical consequences
 
