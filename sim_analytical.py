@@ -24,3 +24,18 @@ for l in l_iter:
   pos += 1
 
 np.savetxt('sim.dat', res_store) 
+
+n_iter = [5, 10, 20, 50]
+
+ratio_store = np.array([0, 0, 0, 0])
+
+for i in xrange(len(n_iter)):
+  n = n_iter[i]
+  l_iter = xrange(n+1, M(n)+1)
+  res_store = np.zeros((len(l_iter), 3))
+  pos = 0
+  for l in l_iter:
+    res_store[pos] = R(n, l)
+    pos += 1
+  np.savetxt('sim_ratio_'+str(n)+'.dat', res_store)
+
