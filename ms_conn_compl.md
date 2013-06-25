@@ -18,28 +18,42 @@ self-edges are allowed). This maximal number of links, $M_n$, represent the whol
 space of possible links. With this information in hand, it is possible to know
 the total number of possible networks given a number $l$ of interactions.
 
-If we term $S_n$ the set of all possible $M_n$ edges in a $n$-node network, then the
-number $G_{n,l}$ of possible networks with $l$ links is the number of $l$-combinations of $S_n$,
-meaning that $G_{n,l} = C_l^{M_n}$, or
+If we term $S_n$ the set of all possible $M_n$ edges in a $n$-node network, then
+the number $G_{n,l}$ of possible networks with $l$ links is the number of
+$l$-combinations of $S_n$, meaning that $G_{n,l} = C_l^{M_n}$, (where $C_x^y$ is
+the binomial coefficient, *i.e.* the number of possible ways to pick $x$
+elements among $y$) or
 
 $$G_{n,l} = \frac{M_n!}{l!(M_n-l)!}$$
 
 Note that this number of possible networks include some graphs in which nodes
-have a degree of 0, and that in most ecological studies, will be discarded.
-Finding out the number of graphs in which some nodes have a degree of 0 is
-similar to finding out how many networks exist with $l$ links between $n-1$
-nodes. If one node is removed from the network, there are $C_{n-1}^n$ possible
-combinations of nodes. For each of these, there are $G_{n-1,l}$ possible
+have a degree of 0, and that in most ecological studies, such nodes will be
+discarded. In addition, in a null-model context
+[@bascompte_nested_2003;@fortuna_habitat_2006], having unconnected nodes in
+random replicates will change the richness of the community, thus possibily
+biasing the value of randomized emerging properties. Finding out the number of
+graphs in which some nodes have a degree of 0 is similar to finding out how many
+networks exist with $l$ links between $n-1$ nodes. If one node is removed from
+the network, there are $C_{n-1}^n$ possible combinations of nodes (this
+simplifies to $n$). For each of these, there are $G_{n-1,l}$ possible
 networks configurations. Note that these networks will also include situations
-in which *more* than one species has a degree of 0. Calling $R_{n,l}$ the number
-of networks with $n$ nodes and $l$ edges in which all nodes have at least one
-edge attached, we can write
+in which *more* than one species has a degree of 0, so that evaluating
+$G_{n-2,l}$ and so forth is not necessary. Calling $R_{n,l}$ the number of
+networks with $n$ nodes and $l$ edges in which all nodes have at least one edge
+attached, we can write
 
 $$R_{n,l} = G_{n,l} - C_{n-1}^n	\times G_{n-1,l}  $$
 
+We call the quantities $R$ and $G$, respectively, the *realized* and *total*
+network space. They tell how many networks of $n$ nodes and $l$ edges exists.
 Based on these informations, we can make two predictions.
 
-**Prediction 1:** $R_{n,l}$ and $G_{n,l}$ will be maximized when $l$ is close to
+**Prediction 1:** Because $C_x^y = C_{y-x}^y$, it comes that the total network
+space is largest when $l = M_n/2$. As in this context the maximal number of
+edges is $M_n$, we define connectance as $l/M_n$, so $\mathrm{max}(G_{n,l})$ is
+reached at $Co = 1/2$. The algebraic expression of the maximum value of $R_{n,l}$ is hard to find, but 
+
+$R_{n,l}$ and $G_{n,l}$ will be maximized when $l$ is close to
 $M_n/2$. In other words, the maximal number of possible networks occurs when
 connectance is intermediate.
 
