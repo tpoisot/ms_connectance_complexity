@@ -51,21 +51,37 @@ Based on these informations, we can make two predictions.
 **Prediction 1:** Because $C_x^y = C_{y-x}^y$, it comes that the total network
 space is largest when $l = M_n/2$. As in this context the maximal number of
 edges is $M_n$, we define connectance as $l/M_n$, so $\mathrm{max}(G_{n,l})$ is
-reached at $Co = 1/2$. The algebraic expression of the maximum value of $R_{n,l}$ is hard to find, but 
-
-$R_{n,l}$ and $G_{n,l}$ will be maximized when $l$ is close to
-$M_n/2$. In other words, the maximal number of possible networks occurs when
-connectance is intermediate.
+reached at $Co = 1/2$. The algebraic expression of the maximum value of
+$R_{n,l}$ is hard to find, but simulations show that it also occurs around $Co=
+1/2$. In other words, regardless of the number of nodes in a network, the
+"degrees of freedom" on network structure, as indicated by the size of the
+realized and total network spaces, are maximized for intermediate connectances.
 
 **Prediction 2:** $R_{n,l}$ will become asimptotically closer to $G_{n,l}$ when
 $l$ is close to $M_n$. In other words, there is only one way to fill a network
 of $n$ nodes with $M_n$ interactions, and in this situation there is no
-possibility to have nodes with a degree of 0.
+possibility to have nodes with a degree of 0. In the situation in which $l
+= M_n$, $G_{n,l} = C_{M_n}^{M_n} = 1$, given that $M_n > M_{n-1}$, it comes that
+$G_{n,l} = R_{n,l} = 1$.
 
 We now illustrate these predictions using networks of 10 nodes, with a number of
-edges varying from 10 to $M_{10}$ (*i.e.* 45 edges).
+edges varying from 10 to $M_{10}$ (*i.e.* 45 edges). As illustrated in Fig.
+\ref{anaspace}, the size of the network space has a hump-shaped relationship
+with connectance, and the size of the realized network space becomes closer to
+the size of the total network space when connectance increases.
 
-- probability to generate a suitable network
+[anaspace]: ana_space.png "Image Title"
+![Size of the total and realized network space for $n = 10$. As predicted in the main text, (1) the size of network spaces peaks at $Co = 1/2$, and (2) the size of the realized network space becomes asymptotically closer to the size of the total network space when connectance increases. \label{anaspace}][anaspace]
+
+In Fig. \ref{anaratio}, we show that regardless of the network size, the
+relative size of the realized network space increases with connectance. The rate
+at which this increase happens is higher for networks with more nodes. However,
+in all cases, when connectance is low, there are only a very small proportion
+of total networks in which all nodes have at least one edge. This suggest
+that the structure of extremely sparse networks is also strongly constrained.
+
+[anaratio]: ana_ratio.png "title"
+![Relative size of the realized network space compared to the total network space when connectance increases, for four different network sizes.\label{anaratio}][anaratio]
 
 # Simulations
 
