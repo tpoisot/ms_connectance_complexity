@@ -29,3 +29,7 @@ set terminal pngcairo size 600,382 enhanced font 'Verdana,10'
 set output 'sim_power.png'
 set ylabel 'Power-law exponent'
 plot "unipartites.dat" u 1:7 ls 1
+
+set output 'sim_modul.png'
+set ylabel 'Louvain modularity'
+plot "unipartites.dat" u 1:8 ls 1

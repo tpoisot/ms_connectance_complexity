@@ -1,16 +1,54 @@
-% When is a network complex? Connectance as a driver of degree distribution
-% T. Poisot
+% When is a network complex? Connectance drives degree distribution and emerging network properties
+% T. Poisot & D. Gravel
 %
 
 # Introduction
 
-- complexity in networks
-- degree distribution vs. connectance
-- "physical" argument
+Ecologists took a strong interest in network theory, as it allowed to make sense
+of some of the complexity of ecological communities. In constrast to community
+modules [@holt_community_1997], using networks allows to work at the whole
+community scale [@dunne_network_2006], thus accounting for feedbacks in species
+interactions [@berlow_simple_2009]. Networks have often been called "complex"
+[@williams_simple_2000], on account of the fact that they represent objects
+(ecological communities) with complex (non-linear, sensitive to indirect
+interactions) dynamics. Because networks are multi-faceted objects with
+a rich range of structure, ecologists have been looking for emerging properties
+that can be easily measured and analyzed, and that relate to ecological
+properties and processes.
+
+Since the beginning of ecological network litterature, connectance, *i.e.* the
+relative number of ecological interactions over the potential number, has been
+recognized as a central network property
+[@yodzis_connectance_1980;@martinez_constant_1992]. In part, this success is to
+be attributed to the fact that connectance relates to early definitions of
+network complexity [@pimm_food_1982], and to the fact that connectance explains
+dynamical properties of ecological networks
+[@dunne_food-web_2002;@dunne_network_2002]. More recently, attention shifted
+from connectance to degree distribution. Variation of degree distribution among
+networks have been taken as evidence that assembly mechanisms differ
+[@williams_biology_2011;@vazquez_degree_2005], and increasingly refined method
+to estimate degree distribution have been devised [@williams_simple_2009]. Some
+authors proposed that degree distribution, rather than connectance, are driving
+the values of nestedness [@fortuna_nestedness_2010].
+
+However, it is worth asking if we were not too quick in discarding connectance
+in profit of degree distribution. A network, ecological or otherwise, can be
+viewed as a physical space, with a limited number of possible interactions. This
+means that there are physical constraints on the filling of a network. For
+example, there is only one way to have a fully connected network, and there are
+a limited number of ways to have a network with the lower possible connectance.
+For this reason, and given the importance that degree distribution took in the
+recent years, it is important that we clearly understand how constrained degree
+distribution is. In this contribution, using an argument from combinatorial
+statistics, we present strong evidences that degree distribution, along with
+emerging network properties, are constrained (and can be predicted) by
+connectance. We discuss the consequences of our results for the comparison of
+different ecological networks, and for the generation of random networks in
+null-model analyses.
 
 # Statistical argument
 
-Assuming and ecological network made of $n$ species, and assuming undirected
+Assuming an ecological network made of $n$ species, and assuming undirected
 interactions with no self-edges (*e.g.* no cannibalism), there can be at most $M
 = n(n-1)/2$ interactions in this network, in which case it is a complete graph
 (the results presented below hold for both directed graphs, and graphs in which
@@ -113,11 +151,59 @@ the power-law exponent.
 ![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results clearly show that central properties of the degree distribution are contingent upon connectance, at a given network size.\label{simstat}][simstat]
 
 With the exception of the kurtosis, *all* statistical descriptors of the degree
-distribution were influenced by the effective connectance (Fig. \ref{simstat}). As predicted in the
-previous part, variance on the degree distribution is hump-shaped with regard to
-connectance ()
+distribution were influenced by the effective connectance (Fig. \ref{simstat}).
+As predicted in the previous part, variance on the degree distribution is
+hump-shaped with regard to connectance, which implies that as average degree
+increases with connectance, the coefficient of variation of the degree
+distribution decreases at high connectances. Note also that the range of
+variances in the degree distribution is higher at intermediate connectances, but
+lower at the extreme.
+
+Kurtosis seems unaffected by connectance. On the other hand, skewness decreases
+when connectance increases. This result is expected. Positively skewed
+distribution have longer or fatter right tails, indicating mostly low values
+(low degree): unconnected networks are made mostly of species with a weak
+generality [@schoener_food_1989]. On the other hand, negative
+skewness indicate that most of the values in the distribution are high.	      
+Ecologically, it means that most species are wide-range generalists, which
+happens in densely connected networks. This bears importants ecological
+consequences, as it indicates that due to physical constraints acting on the
+filling of interactions within the graph, the specialists and generalist species
+are expected to be found together at intermediate connectances.
+
+[powerlaw]: sim_power.png "title"
+![The estimate of the power-law exponent increases with connectance, arriving to a flat distribution for complete graphs. \label{powerlaw}][powerlaw] 
+
+The estimate of the power-law exponent increases when connectance increases
+(Fig. \ref{powerlaw}). This indicates that the degree distribution flattens when
+connectance increases. Taken with the elements presented above, we show that all of the estimators of the degree distribution 
 
 # Practical consequences
 
-- null models
-- swap
+Randomized null models are often used to estimate how much a given emerging
+property deviates from its random expectation [@flores_statistical_2011]. Our
+results show two things. First, except for extremely high or low connectance,
+the proportion of the network space that will be explored using $10^3$
+or $10^4$ replicates is orders of magnitude smaller than the *realized*
+network space. Although this is somewhat compensated by the fact that
+a part of these networks are isomorphic, the risk of infering deviation
+from the random expectation based on a drastically small sampling of the network space is real.
+
+Second, generating null models with a low connectance is a computationally
+intensive task. When connectance decreases, the *realized* network space
+decreases faster than the *total* network space, meaning that the probability of
+picking a network with no un-attached nodes (which is simply $R_{n,l}/G_{n,l}$)
+goes toward zero. For this reason, classical rejection sampling (accept the
+random network if no nodes have no edges, reject else) if bound to take an
+unreasaonable amount of time in networks with low connectance. For this
+reason, using a purely random matrix shuffling as a starting point, then
+swapping interactions until no free nodes remain, seems to be a promising way
+to adress this problem.
+
+# Conclusions
+
+- central place of connectance
+- should be a co-variable in every analyses, including degree distribution
+- networks with a lot or a few interactions are actually simple, because extremely constrained
+
+# References
