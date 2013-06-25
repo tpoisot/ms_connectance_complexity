@@ -1,0 +1,20 @@
+set terminal pngcairo size 600,382 enhanced font 'Verdana,10'
+
+set border linewidth 1.1
+set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 7 ps 0.3 # --- blue
+set style line 2 lc rgb '#dd181f' lt 1 lw 2 pt 5 ps 0.3 # --- red
+
+set tics scale 0.75
+set xlabel 'Effective connectance'
+
+set output 'ana_space.png'
+set logscale y
+set ylabel 'Network space'
+plot "sim.dat" u 1:2 ls 1 t "Total",\
+"" u 1:3 ls 2 t "Realized"
+
+set output 'ana_ratio.png'
+unset key
+unset logscale
+set ylabel 'Proportion of realized network space'
+plot "sim.dat" u 1:($3/$2) ls 1
