@@ -125,7 +125,7 @@ that the structure of extremely sparse networks is also strongly constrained.
 
 In the previous part, we show mathematically that connectance (the number of
 realized *vs.* possible interaction), relative to the network size,
-determined the size of the *network sapce*, *i.e.* how many possible network
+determined the size of the *network space*, *i.e.* how many possible network
 combinations exist. Based on this, we can therefore predict that the degree
 distribution will be contingent upon network connectance. Specifically, we
 expect that the variance of the degree distribution, which is often used
@@ -134,12 +134,19 @@ connectance. The mean, kurtosis, and skewness of the degree distribution
 should all vary in a monotonous way with connectance.
 
 In the simulations below, we use a network of 30 nodes, filled with 35 to
-$M_{30}$ interactions. The number of edges in the networks increases by steps of
-10, and 500 networks are generated for each number of edges. The graphs
-generated are Erdős-Rényi ones, meaning that every potential interaction has the
-same probability of being realized [@erdos_random_1959]. We use an algorithm
-inspired by @knuth_volume_1997, allowing to fix the number of edges in the
-graph. A total of 19000 networks are generated this way.
+$M_{30}$ interactions. We use two different routines to generate networks.
+First, we generate Erdős-Rényi graphs, meaning that every potential interaction
+has the same probability of being realized [@erdos_random_1959]. We use an
+algorithm inspired by @knuth_volume_1997, allowing to fix the number of edges in
+the graph. A total of 19000 networks are generated this way. Second, we use the
+niche model of food webs [@williams_simple_2000], which generates networks under
+rules representing mechanisms of prey-selection in real ecosystems. Other
+randomization methods for food webs exists, but as @stouffer_quantitative_2005
+showed them to yield distribution of degree equivalent to the niche model under
+most conditions, we will not use them here. A total of 500 replicates for each
+level of number of links are generated. All networks satisfy the same criteria
+from the previous part, *i.e.* there are no self-edges and no nodes with a null
+degree.
 
 For each replicate, we measure the degree of all nodes (the degree
 distribution), and measure its variance, coefficient of variation, kurtosis,
@@ -148,14 +155,15 @@ on the sorted degree distribution using the least-squares method; we report
 the power-law exponent.
 
 [simstat]: sim_stats.png "title"
-![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results clearly show that central properties of the degree distribution are contingent upon connectance, at a given network size.\label{simstat}][simstat]
+![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results clearly show that central properties of the degree distribution are contingent upon connectance, at a given network size, and under a given network generation model.\label{simstat}][simstat]
 
-With the exception of the kurtosis, *all* statistical descriptors of the degree
-distribution were influenced by the effective connectance (Fig. \ref{simstat}).
-As predicted in the previous part, variance on the degree distribution is
-hump-shaped with regard to connectance, which implies that as average degree
-increases with connectance, the coefficient of variation of the degree
-distribution decreases at high connectances. Note also that the range of
+Qualitatively, bit the random graph and the niche networks behave exactly the
+same. With the exception of the kurtosis, *all* statistical descriptors of the
+degree distribution were influenced by the effective connectance (Fig.
+\ref{simstat}). As predicted in the previous part, variance on the degree
+distribution is hump-shaped with regard to connectance, which implies that as
+average degree increases with connectance, the coefficient of variation of the
+degree distribution decreases at high connectances. Note also that the range of
 variances in the degree distribution is higher at intermediate connectances, but
 lower at the extreme.
 
@@ -164,7 +172,7 @@ when connectance increases. This result is expected. Positively skewed
 distribution have longer or fatter right tails, indicating mostly low values
 (low degree): unconnected networks are made mostly of species with a weak
 generality [@schoener_food_1989]. On the other hand, negative
-skewness indicate that most of the values in the distribution are high.	      
+skewness indicate that most of the values in the distribution are high.
 Ecologically, it means that most species are wide-range generalists, which
 happens in densely connected networks. This bears importants ecological
 consequences, as it indicates that due to physical constraints acting on the
@@ -176,7 +184,9 @@ are expected to be found together at intermediate connectances.
 
 The estimate of the power-law exponent increases when connectance increases
 (Fig. \ref{powerlaw}). This indicates that the degree distribution flattens when
-connectance increases. Taken with the elements presented above, we show that all of the estimators of the degree distribution 
+connectance increases. Taken with the elements presented above, we show that all
+of the estimators of the degree distribution vary strongly with connectance of
+the network.
 
 # Practical consequences
 

@@ -2,7 +2,10 @@ set terminal pngcairo size 800,582 enhanced font 'Verdana,10'
 
 set border linewidth 1.1
 set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 7 ps 0.3 # --- blue
+set style line 2 lc rgb '#E41A1C' lt 1 lw 2 pt 7 ps 0.3 # --- red
+
 unset key
+set grid
 
 set tics scale 0.75
 set xlabel 'Effective connectance'
@@ -11,16 +14,20 @@ set output "sim_stats.png"
 set multiplot layout 2, 2
 
 set ylabel 'Variance'
-plot "unipartites.dat" u 1:4 ls 1
+plot "unipartites.dat" u 1:4 ls 1,\
+	  "niche.dat" u 2:4 ls 2
 
 set ylabel 'Coefficient of variation'
-plot "unipartites.dat" u 1:(sqrt($4)/$3) ls 1
-
+plot "unipartites.dat" u 1:(sqrt($4)/$3) ls 1,\
+	  "niche.dat" u 2:(sqrt($4)/$3) ls 2
+	  
 set ylabel 'Kurtosis'
-plot "unipartites.dat" u 1:5 ls 1
+plot "unipartites.dat" u 1:5 ls 1,\
+	  "niche.dat" u 2:5 ls 2
 
 set ylabel 'Skewness'
-plot "unipartites.dat" u 1:6 ls 1
+plot "unipartites.dat" u 1:6 ls 1,\
+	  "niche.dat" u 2:6 ls 2
 
 unset multiplot
 
@@ -28,7 +35,8 @@ set terminal pngcairo size 600,382 enhanced font 'Verdana,10'
 
 set output 'sim_power.png'
 set ylabel 'Power-law exponent'
-plot "unipartites.dat" u 1:7 ls 1
+plot "unipartites.dat" u 1:7 ls 1,\
+	  "niche.dat" u 2:7 ls 2
 
 set output 'sim_modul.png'
 set ylabel 'Louvain modularity'
