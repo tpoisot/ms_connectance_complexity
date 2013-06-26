@@ -117,6 +117,9 @@ at which this increase happens is higher for networks with more nodes. However,
 in all cases, when connectance is low, there are only a very small proportion
 of total networks in which all nodes have at least one edge. This suggest
 that the structure of extremely sparse networks is also strongly constrained.
+This is congruent with historical findings by @erdos_random_1959, who showed
+that the probabilty of each node being connected to the graph giant component
+increases with average degree.
 
 [anaratio]: ana_ratio.png "title"
 ![Relative size of the realized network space compared to the total network space when connectance increases, for four different network sizes.\label{anaratio}][anaratio]
@@ -165,7 +168,11 @@ distribution is hump-shaped with regard to connectance, which implies that as
 average degree increases with connectance, the coefficient of variation of the
 degree distribution decreases at high connectances. Note also that the range of
 variances in the degree distribution is higher at intermediate connectances, but
-lower at the extreme.
+lower at the extreme. Due to the fact that the Erdős-Rényi graphs we simulate
+are essentially Poisson random graphs, it is expected that the variance of their
+degree distribution would be lower than for the niche model, which in contrast
+*forces* strong difference in the degree of species according to their niche
+position.
 
 Kurtosis seems unaffected by connectance. On the other hand, skewness decreases
 when connectance increases. This result is expected. Positively skewed
