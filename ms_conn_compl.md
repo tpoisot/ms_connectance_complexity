@@ -137,19 +137,24 @@ connectance. The mean, kurtosis, and skewness of the degree distribution
 should all vary in a monotonous way with connectance.
 
 In the simulations below, we use a network of 30 nodes, filled with 35 to
-$M_{30}$ interactions. We use two different routines to generate networks.
-First, we generate Erdős-Rényi graphs, meaning that every potential interaction
-has the same probability of being realized [@erdos_random_1959]. We use an
-algorithm inspired by @knuth_volume_1997, allowing to fix the number of edges in
-the graph. A total of 19000 networks are generated this way. Second, we use the
-niche model of food webs [@williams_simple_2000], which generates networks under
-rules representing mechanisms of prey-selection in real ecosystems. Other
-randomization methods for food webs exists, but as @stouffer_quantitative_2005
-showed them to yield distribution of degree equivalent to the niche model under
-most conditions, we will not use them here. A total of 500 replicates for each
-level of number of links are generated. All networks satisfy the same criteria
-from the previous part, *i.e.* there are no self-edges and no nodes with a null
-degree.
+$M_{30}$ interactions. We use two different routines to generate networks, that
+are contrasted in the way they distribute edges among nodes. First, we generate
+Erdős-Rényi graphs, meaning that every potential interaction has the same
+probability of being realized [@erdos_random_1959]. We use an algorithm inspired
+by @knuth_volume_1997, allowing to fix the number of edges in the graph rather
+than the probability of an edge occuring, although the generated graphs have the
+same properties as the original model. A total of 19000 networks are generated
+this way. Second, we use the niche model of food webs [@williams_simple_2000],
+which generates networks under rules representing hypothetized mechanisms
+of prey-selection in empirical ecosystems. This particular model assumes
+that the existence of interactions is constrained by the position of
+species along a "niche" axis, for example body size. Other randomization
+methods for food webs exists, but as @stouffer_quantitative_2005 showed
+them to yield distribution of degree equivalent to the niche model under
+most conditions, we will not use them here. A total of 500 replicates for
+each level of number of links are generated. All networks generated with
+the two models satisfy the same criteria from the previous part, *i.e.*
+there are no self-edges and no nodes with a null degree.
 
 For each replicate, we measure the degree of all nodes (the degree
 distribution), and measure its variance, coefficient of variation, kurtosis,
@@ -160,7 +165,7 @@ the power-law exponent.
 [simstat]: sim_stats.png "title"
 ![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results clearly show that central properties of the degree distribution are contingent upon connectance, at a given network size, and under a given network generation model.\label{simstat}][simstat]
 
-Qualitatively, bit the random graph and the niche networks behave exactly the
+Qualitatively, both the random graphs and the niche networks behave exactly the
 same. With the exception of the kurtosis, *all* statistical descriptors of the
 degree distribution were influenced by the effective connectance (Fig.
 \ref{simstat}). As predicted in the previous part, variance on the degree
@@ -174,7 +179,7 @@ degree distribution would be lower than for the niche model, which in contrast
 *forces* strong difference in the degree of species according to their niche
 position.
 
-Kurtosis seems unaffected by connectance. On the other hand, skewness decreases
+Kurtosis seems to be unaffected by connectance. On the other hand, skewness decreases
 when connectance increases. This result is expected. Positively skewed
 distribution have longer or fatter right tails, indicating mostly low values
 (low degree): unconnected networks are made mostly of species with a weak
