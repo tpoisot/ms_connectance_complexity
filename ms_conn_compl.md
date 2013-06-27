@@ -224,8 +224,33 @@ to adress this problem.
 
 # Conclusions
 
-- central place of connectance
-- should be a co-variable in every analyses, including degree distribution
+Through statistical reasoning and simple simulations using models of random
+networks, we show that for a given number of species, the connectance of the
+network drives (i) how many different networks can beg enerated, and (ii) some
+key elements of the degree distribution. We observed both among and between
+model quantitative changes in degree distribution along a connectance gradient.
+The niche model is a particularly striking example of this, with the variance in
+the degree distribution increasing 50-fold when connectance moves from 0.1 to
+0.5. This result has extremely practical implications for the comparison of
+networks, and network properties. As descriptors of degree distribution vary
+with connectance, connectance should be a covariate in all analyses. To some
+extent, the impact of connectance is lesser in the 0.05-0.3 range where most
+empirical food webs lies (although bipartite networks can have much higher
+connectances), but the effect is high enough that it should not be ignored:
+at equal number of species, networks with different connectances are expected to
+have different degree distributions.
+
 - networks with a lot or a few interactions are actually simple, because extremely constrained
+
+Finally, this analysis raises interesting ecological questions. Early analyses
+focusing on degree distribution argued that ecological mechanisms were
+responsible for the distribution shape
+[@vazquez_degree_2005;@fortuna_nestedness_2010;@williams_biology_2011]. In this
+contribution, we show that connectance will impose a lower and higher limit for
+the shape of the degree distribution.Given this information, it's time to bring
+the debate full-circle: is connectance the cause of observed network properties,
+or an emergent property of pairwise species interactions? As the later seems
+far more likely, it now makes sense to focus on why some networks deviate,
+or not, from the expected degree distribution knowing their connectance.
 
 # References
