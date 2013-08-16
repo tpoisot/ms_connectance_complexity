@@ -1,5 +1,11 @@
-pdf: ms_conn_compl.md figure_uni figure_ana
-	pandoc ms_conn_compl.md -o ms.pdf --bibliography=/home/tpoisot/texmf/bibtex/bib/local/library.bib --csl=ecology-letters.csl --template=template.tex
+viewer = zathura
+panopts = --bibliography=/home/tpoisot/texmf/bibtex/bib/local/library.bib --csl=ecology-letters.csl --template=template.tex
+
+pdf: ms_conn_compl.md
+	pandoc ms_conn_compl.md -o ms.pdf $(panopts) 
+
+view: pdf
+	$(viewer) ms.pdf
 
 figure_uni: uni_plots.gpl unipartites.dat niche.dat
 	gnuplot uni_plots.gpl
@@ -7,11 +13,11 @@ figure_uni: uni_plots.gpl unipartites.dat niche.dat
 	touch sim_stats.png
 
 unipartites.dat: sim_unipartite.py
-	python sim_uniparites.py
+	python2 sim_uniparite.py
 	touch unipartites.dat
 
 niche.dat: sim_niche.py
-	python sim_niche.py
+	python2 sim_niche.py
 	touch niche.dat
 
 figure_ana: sim_plots.gpl sim_files
@@ -20,4 +26,4 @@ figure_ana: sim_plots.gpl sim_files
 	touch ana_ratio.png
 
 sim_files: sim_analytical.py
-	python sim_analytical.py
+	python2 sim_analytical.py

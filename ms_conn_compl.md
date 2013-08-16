@@ -258,7 +258,7 @@ focusing on degree distribution argued that ecological mechanisms were
 responsible for the distribution shape
 [@vazquez_degree_2005;@fortuna_nestedness_2010;@williams_biology_2011]. In this
 contribution, we show that connectance will impose a lower and higher limit for
-the shape of the degree distribution.Given this information, it's time to bring
+the shape of the degree distribution. Given this information, it's time to bring
 the debate full-circle: is connectance the cause of observed network properties,
 or an emergent property of pairwise species interactions? As the later seems
 far more likely, it now makes sense to focus on why some networks deviate,
