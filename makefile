@@ -1,5 +1,5 @@
 viewer = zathura
-panopts = --bibliography=/home/tpoisot/texmf/bibtex/bib/local/library.bib --csl=ecology-letters.csl --template=template.tex
+panopts = --bibliography=/home/tpoisot/texmf/bibtex/bib/local/library.bib --csl=oikos.csl --template=template.tex
 
 pdf: ms_conn_compl.md
 	pandoc ms_conn_compl.md -o ms.pdf $(panopts) 
