@@ -2,6 +2,14 @@
 % T. Poisot & D. Gravel
 %
 
+**Authors affiliation:** Université du Québec à Rimouski, Départment de Biologie, G5L3A1 Rimouski (QC), Canada *and* Québec Centre for Biodiversity Sciences
+
+**Contact:** `timothee_poisot@uqar.ca`
+
+> Connectance and degree distributions are important components of the structure of ecological networks. In this contribution, we use a statistical argument and simple network generating models to show that properties of the degree distribution are driven by network connectance. We discuss the consequences of this finding for (1) the generation of random networks in null-model analyses, and (2) the interpretation of network structure and ecosystem properties in relationship with degree distribution.
+
+\cleardoublepage
+
 # Introduction
 
 Ecologists developped a strong interest for network theory, as it allowed to
