@@ -1,5 +1,5 @@
 % When is a network complex? Connectance drives degree distribution and emerging network properties
-% T. Poisot & D. Gravel
+% Timothée Poisot & Dominique Gravel
 %
 
 **Authors affiliation:** Université du Québec à Rimouski, Départment de Biologie, G5L3A1 Rimouski (QC), Canada *and* Québec Centre for Biodiversity Sciences
