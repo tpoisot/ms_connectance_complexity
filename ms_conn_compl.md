@@ -28,10 +28,10 @@ that relate to ecological properties and processes.
 Early in the ecological network literature, connectance, *i.e.* the relative
 number of ecological interactions over the potential number, usually defined at
 the squared richness, has been recognized as a central network property
-[@yodzis_connectance_1980;@martinez_constant_1992]. In part, this success is to
-be attributed to the fact that connectance relates to early definitions of
+[@yodzis_connectance_1980;@martinez_constant_1992]. In part, this success can
+be attributed to the relationship between connectance and early definitions of
 network complexity [@pimm_food_1982], and to the fact that connectance predicts
-reasonably well some key dynamical properties of ecological networks
+reasonably well key dynamical properties of ecological networks
 [@dunne_food-web_2002;@dunne_network_2002] including their stability
 [@may_will_1972]. More recently, attention shifted from connectance to degree
 distribution, that is the statistical properties of the distribution of number
@@ -51,16 +51,15 @@ constraints on the filling of a network, due to the fact that placing the first
 edge will limit the number of ways to place the remaining edges, and so on. For
 example, there is only one way to have a fully connected network, and there are
 a limited number of ways to have a network with the lower possible connectance.
-For this reason, and given the importance that degree distribution took in the
-recent years, it is important that we clearly understand how constrained degree
-distribution actually is, in relation to connectance. In this contribution,
-using an argument from combinatorial statistics and simulations of
-pseudo-random networks under two different models, we present
-strong evidences that degree distribution, along with emerging
-network properties, are constrained (and can be predicted) by
-connectance. We discuss the consequences of our results for the
-comparison of different ecological networks, and for the
-generation of random networks in null-model analyses.
+For this reason, and given the rising importance of degree distribution, it is
+important that we clearly understand how constrained this distribution actually
+is in relation to connectance. In this contribution, using an argument from
+combinatorial statistics and simulations of pseudo-random networks under two
+different models, we present strong evidences that degree distribution, along
+with emerging network properties, are constrained (and can be predicted) by
+connectance. We discuss the consequences of our results for the comparison of
+different ecological networks, and for the generation of random networks in
+null-model analyses.
 
 # Statistical argument
 
@@ -252,31 +251,35 @@ to address this problem.
 
 # Conclusions
 
-Through statistical reasoning and simple simulations using models of random
-networks, we show that for a given number of species, the connectance of the
-network drives (i) how many different networks can be generated, and (ii) some
-key elements of the degree distribution. We observed both among and between
-model quantitative changes in degree distribution along a connectance gradient.
-The niche model is a particularly striking example of this, with the variance in
-the degree distribution increasing 50-fold when connectance moves from 0.1 to
-0.5. This result has extremely practical implications for the comparison of
-networks, and network properties. As descriptors of degree distribution vary
-with connectance, connectance should be made a covariate in all analyses. To some
-extent, the impact of connectance is lesser in the 0.05-0.3 range where most
-empirical food webs lies (although bipartite networks can have much higher
-connectances), but the effect is high enough that it should not be ignored:
-at equal number of species, networks with different connectances are expected to
-have different degree distributions.
+Connectance is an extremely intuitive property of network, expressing how much
+of the potential interactions are realized. Through statistical reasoning and
+simple simulations using models of random networks, we show that for a given
+number of species, connectance drives (i) how many different networks exist,
+and (ii) some key elements of the degree distribution. We observed both
+among and between model quantitative changes in degree distribution
+along a connectance gradient. The niche model is a particularly striking
+example of this, with the variance in the degree distribution increasing
+50-fold when connectance moves from 0.1 to 0.5. This result has
+extremely practical implications for the comparison of networks, and
+network properties. As descriptors of degree distribution vary with
+connectance, connectance should be made a covariate in all analyses. To
+some extent, the impact of connectance is lesser in the 0.05-0.3 range
+where most empirical food webs lies (although bipartite networks can
+have much higher connectances), but the effect is high enough that
+it should not be ignored: at equal number of species, networks with
+different connectances are expected to have different degree
+distributions.
 
 Finally, this analysis raises interesting ecological questions. Early analyses
 focusing on degree distribution argued that ecological mechanisms were
 responsible for the distribution shape
 [@vazquez_degree_2005;@fortuna_nestedness_2010;@williams_biology_2011]. In this
 contribution, we show that connectance will impose a lower and higher limit for
-the shape of the degree distribution. Given this information, it's time to bring
-the debate full-circle: is connectance the cause of observed network properties,
-or an emergent property of pairwise species interactions? As the later seems
-far more likely, it now makes sense to focus on why some networks deviate,
-or not, from the expected degree distribution knowing their connectance.
+the shape of the degree distribution. Given this information, it's time to
+bring the debate full-circle: is connectance the cause of observed network
+properties, or an emergent property of pairwise species interactions? As the
+later seems far more likely, it now makes sense to focus on why some networks
+deviate, or not, from the expected degree distribution knowing their
+connectance.
 
 # References
