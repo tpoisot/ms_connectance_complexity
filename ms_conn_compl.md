@@ -12,8 +12,8 @@
 
 # Introduction
 
-Ecologists developped a strong interest for network theory, as it allowed to
-make sense of some of the complexity of ecological communities. In constrast to
+Ecologists developed a strong interest for network theory, as it allowed to
+make sense of some of the complexity of ecological communities. In contrast to
 early approaches, such as working on "community modules" [groups of a few
 species within a large community, @holt_community_1997], using networks allows
 one to work at the whole community scale [@dunne_network_2006], thus accounting
@@ -25,16 +25,16 @@ multi-faceted objects with a rich range of structure, ecologists have been
 looking for emerging properties that can be easily measured and analyzed, and
 that relate to ecological properties and processes.
 
-Early in the ecological network litterature, connectance, *i.e.* the relative
+Early in the ecological network literature, connectance, *i.e.* the relative
 number of ecological interactions over the potential number, usually defined at
 the squared richness, has been recognized as a central network property
 [@yodzis_connectance_1980;@martinez_constant_1992]. In part, this success is to
 be attributed to the fact that connectance relates to early definitions of
 network complexity [@pimm_food_1982], and to the fact that connectance predicts
-reasonnably well some key dynamical properties of ecological networks
+reasonably well some key dynamical properties of ecological networks
 [@dunne_food-web_2002;@dunne_network_2002] including their stability
 [@may_will_1972]. More recently, attention shifted from connectance to degree
-distribution, that is the statistical properties of the distrubtion of number
+distribution, that is the statistical properties of the distribution of number
 of interactions per species. Variation of degree distribution among networks
 has often been taken as evidence that assembly or interaction mechanisms differ
 [@williams_biology_2011;@vazquez_degree_2005], and increasingly refined methods
@@ -85,7 +85,7 @@ Note that this number of possible networks include some graphs in which nodes
 have a degree of 0, and that in most ecological studies, such nodes will be
 discarded. In addition, in a null-model context
 [@bascompte_nested_2003;@fortuna_habitat_2006], having unconnected nodes in
-random replicates will change the richness of the community, thus possibily
+random replicates will change the richness of the community, thus possibly
 biasing the value of randomized emerging properties. Finding out the number of
 graphs in which some nodes have a degree of 0 is similar to finding out how many
 networks exist with $l$ links between $n-1$ nodes. If one node is removed from
@@ -113,7 +113,7 @@ $R_{n,l}$ is hard to find, but simulations show that it also occurs around $Co=
 "degrees of freedom" on network structure, as indicated by the size of the
 realized and total network spaces, are maximized for intermediate connectances.
 
-**Prediction 2:** $R_{n,l}$ will become asimptotically closer to $G_{n,l}$ when
+**Prediction 2:** $R_{n,l}$ will become asymptotically closer to $G_{n,l}$ when
 $l$ is close to $M_n$. In other words, there is only one way to fill a network
 of $n$ nodes with $M_n$ interactions, and in this situation there is no
 possibility to have nodes with a degree of 0. In the situation in which $l
@@ -136,7 +136,7 @@ However, in all cases, when connectance is low, there are only a very small
 proportion of total networks in which all nodes have at least one edge. This
 suggest that the structure of extremely sparse networks is also strongly
 constrained. This is congruent with historical findings by @erdos_random_1959,
-namely that the probabilty of each node being connected to the graph giant
+namely that the probability of each node being connected to the graph giant
 component increases with average degree (thus for high connectances, all
 nodes are likely to be connected to the giant component, hence no node
 has a degree of 0). In the context of ecology, in which most networks
@@ -155,7 +155,7 @@ determines the size of the *network space*, *i.e.* how many possible network
 combinations exist. Based on this, we can therefore predict that the degree
 distribution will be contingent upon network connectance. Specifically, we
 expect that the variance of the degree distribution, which is often related
-to ecosystem prtoperties and other network structures
+to ecosystem properties and other network structures
 [@fortuna_nestedness_2010], will display a hump-shaped relationship with
 connectance. The mean, kurtosis, and skewness of the degree distribution
 should all vary in a monotonous way with connectance.
@@ -166,11 +166,11 @@ are contrasted in the way they distribute edges among nodes. First, we generate
 Erdős-Rényi (ER) graphs, meaning that every potential interaction has the same
 probability of being realized [@erdos_random_1959]. We use an algorithm
 inspired by @knuth_volume_1997, allowing to fix the number of edges in the
-graph rather than the probability of an edge occuring, although the generated
+graph rather than the probability of an edge occurring, although the generated
 graphs have the same properties as the original ER model. A total of 19000
 networks are generated this way. Second, we use the niche model of food webs
 [@williams_simple_2000], which generates networks under rules representing
-hypothetized mechanisms of prey-selection in empirical ecosystems. This
+hypothesized mechanisms of prey-selection in empirical ecosystems. This
 particular model assumes that the existence of interactions is constrained by
 the position of species along a "niche" axis, for example body size. Other
 randomization methods for food webs exists, but given that
@@ -209,7 +209,7 @@ distribution have longer or fatter right tails, indicating mostly low values
 generality [@schoener_food_1989]. On the other hand, negative
 skewness indicate that most of the values in the distribution are high.
 Ecologically, it means that most species are wide-range generalists, which
-happens in densely connected networks. This bears importants ecological
+happens in densely connected networks. This bears important ecological
 consequences, as it indicates that due to physical constraints acting on the
 filling of interactions within the graphs, networks with intermediate connectances are expected to have species with both low and high generality [@schoener_food_1989].
 
@@ -231,12 +231,12 @@ the proportion of the network space that will be explored using $10^3$
 or $10^4$ replicates (typical values in null models analyses) is orders
 of magnitude smaller than the *realized* network space. Although this
 is somewhat compensated by the fact that a part of these networks are
-isomorphic, the risk of infering deviation from the random expectation
+isomorphic, the risk of inferring deviation from the random expectation
 based on a drastically small sampling of the network space is real, and
-unadressed. On the other hand, when connectance is high, the number of
+unaddressed. On the other hand, when connectance is high, the number of
 unique network combinations decreases, and there is a risk to
-pseudo-replicate some of them when generating ramdom networks. To the
-best of our knowledge, these issues have seldom be adressed in the
+pseudo-replicate some of them when generating random networks. To the
+best of our knowledge, these issues have seldom be addressed in the
 literature on ecological network randomization.
 
 Second, generating null models with a low connectance is a computationally
@@ -245,10 +245,10 @@ decreases faster than the *total* network space, meaning that the probability of
 picking a network with no un-attached nodes (which is simply $R_{n,l}/G_{n,l}$)
 goes toward zero. For this reason, classical rejection sampling (accept the
 random network if no nodes have no edges, reject it if not) is bound to take an
-unreasaonable amount of time in networks with low connectance. For this
+unreasonable amount of time in networks with low connectance. For this
 reason, using a purely random matrix shuffling as a starting point, then
 swapping interactions until no free nodes remain, seems to be a promising way
-to adress this problem.
+to address this problem.
 
 # Conclusions
 
