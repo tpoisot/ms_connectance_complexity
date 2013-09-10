@@ -14,33 +14,33 @@
 
 Ecologists developed a strong interest for network theory, as it allowed to
 make sense of some of the complexity of ecological communities. In contrast to
-early approaches, such as working on "community modules" [groups of a few
-species within a large community, @holt_community_1997], using networks allows
-one to work at the whole community scale [@dunne_network_2006], thus accounting
-for feedbacks in species interactions [@berlow_simple_2009]. Networks have
+early approaches on "community modules" [groups of a few
+species within a large community, @holt_community_1997] a network level approach allows
+one to account for the whole community scale [@dunne_network_2006], thus integrating
+all direct and indirect interactions [@berlow_simple_2009]. Networks have
 often been called "complex" [@williams_simple_2000], on account of the fact
-that they represent objects (ecological communities) with complex (non-linear,
-sensitive to indirect interactions) dynamics. Because networks are
+that they represent objects (ecological communities) with complex dynamics (i.-e. non-linear,
+sensitive to indirect interactions). Because networks are
 multi-faceted objects with a rich range of structure, ecologists have been
 looking for emerging properties that can be easily measured and analyzed, and
 that relate to ecological properties and processes.
 
-Early in the ecological network literature, connectance, *i.e.* the relative
-number of ecological interactions over the potential number, usually defined at
-the squared richness, has been recognized as a central network property
-[@yodzis_connectance_1980;@martinez_constant_1992]. In part, this success can
+Early in the ecological network literature, connectance, *i.e.* the proportion of realized ecological interactions among the potential ones (most often the squared species richness), has been recognized as a central network property
+[@yodzis_connectance_1980;@martinez_constant_1992]. 
+% DG: I think the original interest derives from May's work on stability
+In part, this success can
 be attributed to the relationship between connectance and early definitions of
 network complexity [@pimm_food_1982], and to the fact that connectance predicts
 reasonably well key dynamical properties of ecological networks
 [@dunne_food-web_2002;@dunne_network_2002] including their stability
-[@may_will_1972]. More recently, attention shifted from connectance to degree
+[@may_will_1972]. More recently, attention shifted from connectance, a community-averaged property, tothe degree
 distribution, that is the statistical properties of the distribution of number
 of interactions per species. Variation of degree distribution among networks
 has often been taken as evidence that assembly or interaction mechanisms differ
 [@williams_biology_2011;@vazquez_degree_2005], and increasingly refined methods
 to estimate degree distribution have been devised [@williams_simple_2009]. Some
-authors proposed that degree distribution, rather than connectance, are driving
-the values of nestedness or modularity, which are important drivers of network
+authors proposed that degree distribution, rather than connectance, is driving
+higher level network properties such as nestedness or modularity, which are important drivers of network
 dynamics [@fortuna_nestedness_2010].
 
 However, it is worth asking if we were not too quick in discarding connectance
@@ -50,13 +50,13 @@ space is limited by the number of nodes. This means that there are physical
 constraints on the filling of a network, due to the fact that placing the first
 edge will limit the number of ways to place the remaining edges, and so on. For
 example, there is only one way to have a fully connected network, and there are
-a limited number of ways to have a network with the lower possible connectance.
-For this reason, and given the rising importance of degree distribution, it is
+a limited number of ways to have a network with the lowest possible connectance.
+For this reason, and given the rising importance of degree distribution in the literature, it is
 important that we clearly understand how constrained this distribution actually
 is in relation to connectance. In this contribution, using an argument from
 combinatorial statistics and simulations of pseudo-random networks under two
-different models, we present strong evidences that degree distribution, along
-with emerging network properties, are constrained (and can be predicted) by
+different models, we present strong evidence that degree distribution, along
+with other emerging network properties, are constrained (and can be predicted to a certain extent) by
 connectance. We discuss the consequences of our results for the comparison of
 different ecological networks, and for the generation of random networks in
 null-model analyses.
@@ -65,10 +65,12 @@ null-model analyses.
 
 Assuming an ecological network made of $n$ species, and assuming undirected
 interactions with no self-edges (*e.g.* no cannibalism), there can be at most
-$M = n(n-1)/2$ interactions in this network, in which case it is a complete
+$M = n(n-1)/2$ interactions
+% DG: directed interactions? otherwise why dividing by 2?
+ in this network, in which case it is a complete
 graph (the results presented below hold qualitatively for both directed graphs,
-and graphs in which self-edges are allowed). This maximal number of
-links, $M_n$, represent the whole space of possible links. With this
+and graphs in which self-edges are allowed). We note this maximal number of
+links $M_n$. With this
 information in hand, it is possible to know the total number of possible
 networks given a number $l$ of interactions.
 
@@ -77,31 +79,43 @@ the number $G_{n,l}$ of possible networks with $l$ links is the number of
 $l$-combinations of $S_n$, meaning that $G_{n,l} = C_l^{M_n}$, (where $C_x^y$ is
 the binomial coefficient, *i.e.* the number of possible ways to pick $x$
 elements among $y$) or
+% DG: I'm confused here. C is connectance? Say it explicitly
+% DG: what is y? 
 
 $$G_{n,l} = \frac{M_n!}{l!(M_n-l)!}$$
 
 Note that this number of possible networks include some graphs in which nodes
 have a degree of 0, and that in most ecological studies, such nodes will be
-discarded. In addition, in a null-model context
+discarded. We therefore have to evaluate how many of such networks will be found withing $G_{n,l}$. In addition, in a null-model context
 [@bascompte_nested_2003;@fortuna_habitat_2006], having unconnected nodes in
 random replicates will change the richness of the community, thus possibly
-biasing the value of randomized emerging properties. Finding out the number of
-graphs in which some nodes have a degree of 0 is similar to finding out how many
-networks exist with $l$ links between $n-1$ nodes. If one node is removed from
+biasing the value of randomized emerging properties.
+% DG: We don't have enough information to understand the previous sentence.
+ Finding out the number of
+networks 
+$ DG: I changed the word to network. Be careful to use a constant terminology
+in which a given node have a degree of 0 is similar to finding out how many
+networks exist with $l$ links between the $n-1$ nodes. If one node is removed from
 the network, there are $C_{n-1}^n$ possible combinations of nodes (this
-simplifies to $n$). For each of these, there are $G_{n-1,l}$ possible
+simplifies to $n$).
+%DG: I don't get the simplification
+ For each of these, there are $G_{n-1,l}$ possible
 networks configurations. Note that these networks will also include situations
 in which *more* than one species has a degree of 0, so that evaluating
-$G_{n-2,l}$ and so forth is not necessary. Calling $R_{n,l}$ the number of
+$G_{n-2,l}$ and so forth is not necessary. 
+% DG: again, I don't catch which this evaluation is not necessary. I guess it is because you are looking at how many networks will have at least one node with degree 0, which includes all networks with more than one node with degree 0. Reword
+Calling $R_{n,l}$ the number of
 networks with $n$ nodes and $l$ edges in which all nodes have at least one edge
 attached, we can write
 
 $$R_{n,l} = G_{n,l} - C_{n-1}^n	\times G_{n-1,l}  $$
 
+% DG: I took Amael's approach and found there might be something wrong with this eqation. I think it has to do with the definition of C, and it might simply miss a division by n at some point. R, C and G are numbers of networks. So C*G (the right term) should yield a square number of networks. 
+
 We call the quantities $R$ and $G$, respectively, the *realized* and *total*
 network space. They measure how many networks of $n$ nodes and $l$ edges
 exists, either allowing or preventing the existence of nodes with no
-interactions. Based on these informations, we can make two predictions.
+interactions. Based on this reasonning, we can make two predictions.
 
 **Prediction 1:** Because $C_x^y = C_{y-x}^y$, it comes that the total network
 space is largest when $l = M_n/2$. As in this context the maximal number of
@@ -109,8 +123,8 @@ edges is $M_n$, we define effective connectance as $Co = l/M_n$, so $\mathrm{max
 reached at $Co = 1/2$. The algebraic expression of the maximum value of
 $R_{n,l}$ is hard to find, but simulations show that it also occurs around $Co=
 1/2$. In other words, regardless of the number of nodes in a network, the
-"degrees of freedom" on network structure, as indicated by the size of the
-realized and total network spaces, are maximized for intermediate connectances.
+"degrees of freedom" of network structure, as indicated by the size of the
+realized and total network spaces, is maximized at intermediate connectance.
 
 **Prediction 2:** $R_{n,l}$ will become asymptotically closer to $G_{n,l}$ when
 $l$ is close to $M_n$. In other words, there is only one way to fill a network
@@ -118,6 +132,8 @@ of $n$ nodes with $M_n$ interactions, and in this situation there is no
 possibility to have nodes with a degree of 0. In the situation in which $l
 = M_n$, $G_{n,l} = C_{M_n}^{M_n} = 1$, given that $M_n > M_{n-1}$, it comes that
 $G_{n,l} = R_{n,l} = 1$.
+
+%DG: If you keep the same structure, it would be important to give an ecological interpretation of prediction #2
 
 We now illustrate these predictions using networks of 10 nodes, with a number of
 edges varying from 10 to $M_{10}$ (*i.e.* 45 edges). As illustrated in Fig.
@@ -130,16 +146,16 @@ the size of the total network space when connectance increases.
 
 In Fig. \ref{anaratio}, we show that regardless of the network size, the
 relative size of the realized network space increases with connectance. The
-rate at which this increase happens is higher for networks with more nodes.
+rate at which it occurs increases with network size.
 However, in all cases, when connectance is low, there are only a very small
-proportion of total networks in which all nodes have at least one edge. This
+proportion of the total network space in which all nodes have at least one edge. This
 suggest that the structure of extremely sparse networks is also strongly
 constrained. This is congruent with historical findings by @erdos_random_1959,
 namely that the probability of each node being connected to the graph giant
 component increases with average degree (thus for high connectances, all
 nodes are likely to be connected to the giant component, hence no node
 has a degree of 0). In the context of ecology, in which most networks
-have a low connectance, this implies that generating random networks can be
+have a low connectance, it implies that generating random networks to test null hypotheses can be
 a computationally intensive task, as the realized network space is
 (proportionally) small.
 
@@ -151,7 +167,7 @@ a computationally intensive task, as the realized network space is
 In the previous part, we show mathematically that connectance (the number of
 realized *vs.* possible interactions), relative to the network size,
 determines the size of the *network space*, *i.e.* how many possible network
-combinations exist. Based on this, we can therefore predict that the degree
+combinations exist. Based on this, we can therefore expect that the degree
 distribution will be contingent upon network connectance. Specifically, we
 expect that the variance of the degree distribution, which is often related
 to ecosystem properties and other network structures
@@ -160,7 +176,7 @@ connectance. The mean, kurtosis, and skewness of the degree distribution
 should all vary in a monotonous way with connectance.
 
 In the simulations below, we use networks of 30 nodes, filled with 35 to
-$M_{30}$ interactions. We use two different routines to generate networks, that
+$M_{30}$ interactions. We use two different routines to generate random networks, that
 are contrasted in the way they distribute edges among nodes. First, we generate
 Erdős-Rényi (ER) graphs, meaning that every potential interaction has the same
 probability of being realized [@erdos_random_1959]. We use an algorithm
@@ -169,25 +185,24 @@ graph rather than the probability of an edge occurring, although the generated
 graphs have the same properties as the original ER model. A total of 19000
 networks are generated this way. Second, we use the niche model of food webs
 [@williams_simple_2000], which generates networks under rules representing
-hypothesized mechanisms of prey-selection in empirical ecosystems. This
+hypothesized mechanisms of prey-selection in empirical ecosystems [@gravel_inferring_2013]. This
 particular model assumes that the existence of interactions is constrained by
 the position of species along a "niche" axis, for example body size. Other
 randomization methods for food webs exists, but given that
 @stouffer_quantitative_2005 showed that they yield similar degree distributions
 to the niche model, we will not use them here. A total of 500 replicates for
-each level of number of links are generated. All networks generated with the
-two models satisfy the same criteria from the previous part, *i.e.* there are
-no self-edges and no nodes with a null degree.
+each value of $l$ are generated. All networks generated with the
+two models are free of self-edges and nodes with a null degree.
 
-For each replicate, we measure the degree distribution, and report its
+For each replicate, we measure the degree distribution and report its
 variance, coefficient of variation, kurtosis, and skewness. In addition, for
 each network, we fit a power-law distribution on the sorted degree distribution
 using the least-squares method; we report the power-law exponent.
 
 [simstat]: sim_stats.png "title"
-![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results clearly show that central properties of the degree distribution are contingent upon connectance, at a given network size, and under a given network generation model. ER networks are in blue, niche-model networks are in red.\label{simstat}][simstat]
+![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results show that central properties of the degree distribution are contingent upon connectance, at a given network size, and under a given network generation model. ER networks are in blue, niche-model networks are in red.\label{simstat}][simstat]
 
-Qualitatively, both the random graphs and the niche networks behave exactly the
+Qualitatively, the random graphs and the niche networks behave exactly the
 same. With the exception of the kurtosis, *all* statistical descriptors of the
 degree distribution were influenced by the effective connectance (Fig.
 \ref{simstat}). As predicted in the previous part, variance of the degree
@@ -201,8 +216,8 @@ degree distribution would be lower than for the niche model, which in contrast
 *forces* strong difference in the degree of species according to their niche
 position.
 
-Kurtosis is unaffected by connectance. On the other hand, skewness decreases
-when connectance increases. This result is expected. Positively skewed
+Kurtosis is independent of connectance, while skewness decreases
+with connectance. This result is expected. Positively skewed
 distribution have longer or fatter right tails, indicating mostly low values
 (low degree): unconnected networks are made mostly of species with a weak
 generality [@schoener_food_1989]. On the other hand, negative
@@ -213,7 +228,8 @@ consequences, as it indicates that due to physical constraints acting on the
 filling of interactions within the graphs, networks with intermediate connectances are expected to have species with both low and high generality [@schoener_food_1989].
 
 [powerlaw]: sim_power.png "title"
-![The estimate of the power-law exponent increases with connectance, arriving to a flat distribution for complete graphs. \label{powerlaw}][powerlaw] 
+![The estimate of the power-law exponent increases with connectance, reaching a flat distribution for complete graphs. \label{powerlaw}][powerlaw] 
+%DG: technically, I think we should not even try to fit a power law to highly connected networks. It needs to be truncated as soon at the probability of a species having a degree of 2*n is non negligible. I would therefore avoid the highest values and the second part of the legend on complete graphs
 
 The estimate of the power-law exponent increases when connectance increases
 (Fig. \ref{powerlaw}). This indicates that the degree distribution flattens when
@@ -223,7 +239,7 @@ the network.
 
 # Practical consequences
 
-Randomized null models are often used to estimate how much a given emerging
+Randomized null models are often used to estimate how much a given network
 property deviates from its random expectation [@flores_statistical_2011]. Our
 results show two things. First, except for extremely high or low connectance,
 the proportion of the network space that will be explored using $10^3$
@@ -234,20 +250,25 @@ isomorphic, the risk of inferring deviation from the random expectation
 based on a drastically small sampling of the network space is real, and
 unaddressed. On the other hand, when connectance is high, the number of
 unique network combinations decreases, and there is a risk to
-pseudo-replicate some of them when generating random networks. To the
+pseudo-replicate some of them when generating random networks. 
+% DG: I would not use the term pseudo-replication since it has to do with degrees of freedom in frequentists statistics. It is meaningless (I mean, almost) for randomized hypothesis testing. I think it would be more appropriate and precise to refer to type I and type II errors
+To the
 best of our knowledge, these issues have seldom be addressed in the
 literature on ecological network randomization.
 
 Second, generating null models with a low connectance is a computationally
 intensive task. When connectance decreases, the *realized* network space
 decreases faster than the *total* network space, meaning that the probability of
-picking a network with no un-attached nodes (which is simply $R_{n,l}/G_{n,l}$)
+picking a network with no 0 degree nodes (which is simply $R_{n,l}/G_{n,l}$)
 goes toward zero. For this reason, classical rejection sampling (accept the
 random network if no nodes have no edges, reject it if not) is bound to take an
-unreasonable amount of time in networks with low connectance. For this
+unreasonable amount of time in networks with low connectance. 
+% DG: It will also select some types of networks. Obviously, the average degree and the skewness of the distribution of networks with no 0 degree nodes will be different (spreading of the edges among a larger number of nodes)
+For this
 reason, using a purely random matrix shuffling as a starting point, then
 swapping interactions until no free nodes remain, seems to be a promising way
 to address this problem.
+%DG: you have a reference for this?
 
 # Conclusions
 
@@ -260,9 +281,10 @@ among and between model quantitative changes in degree distribution
 along a connectance gradient. The niche model is a particularly striking
 example of this, with the variance in the degree distribution increasing
 50-fold when connectance moves from 0.1 to 0.5. This result has
-extremely practical implications for the comparison of networks, and
-network properties. As descriptors of degree distribution vary with
-connectance, connectance should be made a covariate in all analyses. To
+ practical implications for network comparisons. As descriptors of degree distribution vary with
+connectance, connectance should be factored out from all analyses. 
+% DG: might pose some colinearity problems though
+To
 some extent, the impact of connectance is lesser in the 0.05-0.3 range
 where most empirical food webs lies (although bipartite networks can
 have much higher connectances), but the effect is high enough that
@@ -272,14 +294,16 @@ distributions.
 
 Finally, this analysis raises interesting ecological questions. Early analyses
 focusing on degree distribution argued that ecological mechanisms were
-responsible for the distribution shape
+responsible for the shape of the distribution
 [@vazquez_degree_2005;@fortuna_nestedness_2010;@williams_biology_2011]. In this
 contribution, we show that connectance will impose a lower and higher limit for
-the shape of the degree distribution. Given this information, it's time to
+the shape of the degree distribution. Given this information, it is time to
 bring the debate full-circle: is connectance the cause of observed network
 properties, or an emergent property of pairwise species interactions? As the
 later seems far more likely, it now makes sense to focus on why some networks
 deviate, or not, from the expected degree distribution knowing their
 connectance.
+%DG: just a random thought: it would be interesting to put these results in the context of May's criterion of stability.
+% DG: going one step further, I also wonder how much the shape of the motifs frequency distribution will be impacted by connectance. My feeling is that with increasing C the distribution will get flatter. Low connectance and selection will promote the emergence of some peaks.
 
 # References
