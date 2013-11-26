@@ -95,9 +95,16 @@ link they chose to use the niche model as a benchmark for testing their
 theory. This is ok, but I am concerned about the extent to which this is in
 line with the aims and scope of the journal.
 
+> We feel that the presentation of our work is inadequate. Although it is
+true that we primarily adress ecologists (we modified the title, and the
+text at several places, to make it clear), we evaluate the niche model in
+addition to the more general *ER* model.
+
 In any case, and in order to make it more 'ecological' I would make reference
 to ecology in the title; something like: 'When is an ecological network
 complex?...'
+
+> We appreciate the suggestion, and we made the change.
 
 The structure of the paper does not comply with the structure required by the
 journal. Please re-organize into the right sections. I suggest putting the
@@ -106,13 +113,22 @@ and the results bits into a Results and Discussion section. Section 4 also
 in Results and Discussion, and the Conclusions. Please look at the web page
 for details.
 
+> We feel like re-organising the paper in this way would make the reading
+awkward, and difficult to follow. If the editor has nothing to say about
+the current format, we will leave the paper as it is.
+
 References do not comply with the format (when they have three authors or
 less all of them should be named, within the text and in the references
 section). For example Dunne et al. 2002a. Please check all references and
 ensure they comply with this.
 
+> We appreciate the comment. We think this is a very minor detail, of which
+we will take care if the paper is eventually accepted.
+
 As a general comment, perhaps for future occasions, please enumerate the lines
 within each page of the manuscript. This makes easy the reviewing process.
+
+> We apologize for not doing so. This has been fixed in the revision.
 
 ### Experimental design
 
@@ -126,14 +142,26 @@ However, there are some minor details I would like to see clarified:
 that researchers discard connectance in favour of degree distributions? Perhaps
 some references are in order.
 
+> We apologize for the lack of clarity. We have now fixed this sentence,
+which reads *it is worth asking if we were not too quick in focusing most of
+our research effort on degree distribution, in detriment to more fondamental
+work on connectance and its effects*, which we think better reflect the
+reality. References showing the development of questions and methods related
+to degree distributions are given in the paragraph immediately above.
+
 2. in section 2 you say you are doing the statistical derivations for
 undirected networks and the results apply equally to directed ones. In
 section 3 on the other hand, you employ the niche model, which yields directed
 networks. Are you using directed or undirected networks for the simulations?
 
+> In section 3, we employ both the *ER* (undirected) and *niche model*
+(directed) graph generators. We now mention this explicitely in the text.
+
 3. in the simulations section, you say that you experiment with 35 to M_30
 interactions. At how long intervals? 1 by 1? (meaning 35, 36, 37, and so on)
 each 2? (35, 37, 39…), every five? (35, 40, 45…)
+
+> We use steps of 10. This is now mentionned in the text.
 
 4. also, after describing the ER model for random graphs generation, you
 mention you generated 19000, and then after the niche model description you
@@ -141,16 +169,27 @@ say that 500 replicates were generated for each l. What is the relationship
 between these numbers? Why are there different number of replicates for each
 type of network?
 
+> The *ER* model allows to fix the number of interactions. The *niche* model
+only allows to fix connectance. The two datasets have the same size *in fine*.
+
 5. towards the end of page 10 you mention that 2*n is the number of links
 after which the power law relationship would truncate for highly connected
 networks. Unless networks are directed (see point 2 above), I think this
 value should be n. Please double check this.
+
+> This is correct, thank you for pointing out the mistake. We have corrected
+this in the revision.
 
 ### Validity of the findings
 
 The main concern I have about the validity of the findings is about the
 statistical significance of the results, as no statistical tests or results
 are presented.
+
+> The problem with simulations is that it is all too easy to increase the
+sample size until everything becomes strongly significant. Given that, rather
+than doing statistics (*i.e.* hypothesis-testing, frequentist statistics),
+we present the $R^2$ of the relationships we describe.
 
 For example:
 
@@ -160,7 +199,9 @@ at least in niche model networks. If this claim is supported by statistical
 tests they should be presented, otherwise it should be clearly stated that
 this is your interpretation of the plot.
 
-Another concern I have, which doesn’t have anything to do with the results
+> TODO
+
+Another concern I have, which doesn't have anything to do with the results
 but with their implications is that in section 4 the authors claim that
 finding networks with low connectance is very hard and will potentially
 take a long time to compute. Many works have used the niche model for
@@ -170,17 +211,29 @@ researchers have never experienced any problems generating networks with
 such low connectances. I have performed experiments like this myself and
 have always found realistic configurations.
 
+> Nowhere in section 4 do we make such a claim. What we show in the paper
+is that such networks are difficult to randomize, especially if one wants
+to keep all nodes connected.
+
 ### Comments for the author
 
 I would find a more appropriate reference for “complex” in the 6th line of the introduction.
 
+> We do not see what the problem with this reference is (nor does the referee suggest a more suitable one).
+
 ‘Networks’ should be ‘Ecological networks’ in that same sentence.
+
+> Corrected.
 
 The caption of figures 3 and 4 must specify what does each point represent. One
 network? An average of several? It doesn’t look like there are 19000 points
 on that graph, but I might be wrong.
 
+> TODO
+
 The last word of section 4 should be changed to avenue instead of problem.
+
+> Corrected.
 
 In the last paragraph of the paper you enter a very delicate discussion about
 the role of connectance on food web stability. I think this is out of the
@@ -190,6 +243,8 @@ is taken by surprise when reading this. If you do not wish to remove it,
 you should at least rephrase it making the stability thing not the central
 aspect of the consequences of your current work but just another possible
 feature affected by it.
+
+> TODO
 
 ## Reviewer 3 (Enrico Rezende)
 
@@ -255,9 +310,16 @@ equation correct? The term in the denominator (n – (n – 1)!) can be negative,
 which should not be the case in combinatorials. Shouldn’t it be only (n!/(n
 – 1)!)? Please double check.
 
+> This was indeed a typo in the manuscript (the closing parenthesis was not
+where it should). The correct formula is now in the text.
+
 p. 4 next line: Remove closing parenthesis in “which further simplifies to n”.
 
+> This one is actually needed.
+
 p. 4. In sentence “with at least one node of null degree”, close parenthesis.
+
+> Fixed.
 
 Fig 1. I think this figure does not appropriately illustrate that "the realized
 network space becomes asymptotically closer to the size of the total network
