@@ -7,8 +7,14 @@
 A number of idiomatic and grammatical errors, most only irritating (e.g “a
 given note have a degree”), but sometimes they do compromise clarity.
 
-Terms are used without previous reference, e.g. p.7, “the graph giant
-component” …? Do all networks have a giant component?
+> As non-native english speakers, we apologize for our imperfect English being
+"irritating" at places. We have done our best to correct these mistakes.
+
+Terms are used without previous reference, e.g. p.7, "the graph giant
+component"? Do all networks have a giant component?
+
+> We clarified this (**PP LL**). We added additional definition where we
+felt they might be needed,too.
 
 Figures are adequate to portray results, but could be improved; f.i. showing
 the proposed truncation value (p.10).
@@ -22,27 +28,56 @@ stability loss- when networks break into at least two unconnected parts –
 could have been included easily. Instead, authors only consider the number
 of unconnected nodes in the resampling process.
 
+> We think that the referee uses a very specific definition of what is
+stability in ecology. In the work of Bob May, which we indeed cite in the
+introduction, stability is defined as a property of the adjacency matrix
+representing a unipartite graph, relative to connectance. We do not *raise*
+the issue of stability as a function of connectance, we simply *mention* that
+connectance is a proxy for stability, and as such we should pay attention
+to what connectance really entails. **No changes were made**.
+
 ### Validity of the findings
 
-The main finding – that connectance is unimodally correlated with various
-other network parameters, e.g. power-law exponent – is known, but it is
+The main finding - that connectance is unimodally correlated with various
+other network parameters, e.g. power-law exponent -  is known, but it is
 convenient to have it well documented.  I was surprised by the argument that
-10^3 or 10^4 permutations are insufficient (“drastically small sampling”)
+10^3 or 10^4 permutations are insufficient ("drastically small sampling")
 because the sampled space is much larger. No bias or error is demonstrated
-by these “small” samples (which are not samples proper anyway), so that this
+by these "small" samples (which are not samples proper anyway), so that this
 statement seems to ignore almost century of sampling theory.
 
-On p.12 authors recommend a metohd (“swapping interacrtions until no free
-nodes remain”) which they do not seem to have used.
+> TODO
+
+On p.12 authors recommend a metohd ("swapping interacrtions until no free
+nodes remain") which they do not seem to have used.
+
+> The goal of this article is not to compare the relative merits of null
+models, or randomization networks. We recommend that, when generating
+null networks to measure wether empirically measures deviate from their
+random expectation, if the template network has a low connectance, "naive"
+randomization methods are bound to fail, and swapping methods might perform
+better. **No changes were made**.
 
 Bipartite networks, which have been much investigated in the ecological
 network literature, turn up in the conclusions without having been mentioned
 at all before.
 
+> It is certainly true that bipartite networks received a lot of attention
+in ecology. They present, however, a slightly less general case, and (in
+the context of a simulation approach), require to fix several additional
+parameters. The algebra presented in the first part of the manuscript
+is equally relevant for bipartite networks, so we do not understand  the
+rationale for this comment. In addition, may references given in the text
+are focused on bipartite ecological networks. **No changes were made**.
+
 ### Comments for the author
 
 In my judgement this paper needs substantial revision but also additional
 work to raise its relevance.
+
+> Reading this review, it is not clear what additional work this referee would
+have had us perform. We built on comments from the following two referees
+to produce additional results and extensive revisions to the text nonetheless.
 
 ## Reviewer 2 (Miguel Lurgi)
 
