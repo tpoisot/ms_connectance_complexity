@@ -8,7 +8,8 @@ A number of idiomatic and grammatical errors, most only irritating (e.g “a
 given note have a degree”), but sometimes they do compromise clarity.
 
 > As non-native english speakers, we apologize for our imperfect English being
-"irritating" at places. We have done our best to correct these mistakes.
+"irritating" at places. We have done our best to correct these mistakes,
+but are always welcome to more guidance.
 
 Terms are used without previous reference, e.g. p.7, "the graph giant
 component"? Do all networks have a giant component?
@@ -46,9 +47,11 @@ because the sampled space is much larger. No bias or error is demonstrated
 by these "small" samples (which are not samples proper anyway), so that this
 statement seems to ignore almost century of sampling theory.
 
-> TODO
+> We have modified this sentence slightly so that we now suggest to determine
+the intensity of sampling agaisnt the connectance of the template network. We
+are welcome to suggestions of more references is the referee can suggest some.
 
-On p.12 authors recommend a metohd ("swapping interacrtions until no free
+On p.12 authors recommend a method ("swapping interacrtions until no free
 nodes remain") which they do not seem to have used.
 
 > The goal of this article is not to compare the relative merits of null
@@ -75,9 +78,8 @@ are focused on bipartite ecological networks. **No changes were made**.
 In my judgement this paper needs substantial revision but also additional
 work to raise its relevance.
 
-> Reading this review, it is not clear what additional work this referee would
-have had us perform. We built on comments from the following two referees
-to produce additional results and extensive revisions to the text nonetheless.
+> Reading this review, it is not clear precisely what additional work this
+referee would have had us perform. We nonetheless made extensive revisions.
 
 ## Reviewer 2 (Miguel Lurgi)
 
@@ -95,10 +97,10 @@ link they chose to use the niche model as a benchmark for testing their
 theory. This is ok, but I am concerned about the extent to which this is in
 line with the aims and scope of the journal.
 
-> We feel that the presentation of our work is inadequate. Although it is
-true that we primarily adress ecologists (we modified the title, and the
-text at several places, to make it clear), we evaluate the niche model in
-addition to the more general *ER* model.
+> We feel that the presentation of our work is not entirely fair. Although
+it is true that we primarily adress ecologists (we modified the title, and
+the text at several places, to make it clear), we evaluate the niche model
+in addition to the more general *ER* model.
 
 In any case, and in order to make it more 'ecological' I would make reference
 to ecology in the title; something like: 'When is an ecological network
@@ -114,8 +116,9 @@ in Results and Discussion, and the Conclusions. Please look at the web page
 for details.
 
 > We feel like re-organising the paper in this way would make the reading
-awkward, and difficult to follow. If the editor has nothing to say about
-the current format, we will leave the paper as it is.
+awkward, and difficult to follow. Considering that the paper has been sent
+for review with its current structure, we will change consider changing it
+if the editor request it.
 
 References do not comply with the format (when they have three authors or
 less all of them should be named, within the text and in the references
@@ -159,7 +162,7 @@ networks. Are you using directed or undirected networks for the simulations?
 
 3. in the simulations section, you say that you experiment with 35 to M_30
 interactions. At how long intervals? 1 by 1? (meaning 35, 36, 37, and so on)
-each 2? (35, 37, 39…), every five? (35, 40, 45…)
+each 2? (35, 37, 39), every five? (35, 40, 45)
 
 > We use steps of 10. This is now mentionned in the text.
 
@@ -217,9 +220,12 @@ to keep all nodes connected.
 
 ### Comments for the author
 
-I would find a more appropriate reference for “complex” in the 6th line of the introduction.
+I would find a more appropriate reference for “complex” in the 6th line of
+the introduction.
 
-> We do not see what the problem with this reference is (nor does the referee suggest a more suitable one).
+> We do not see what the problem with this reference is, but are welcome to
+more accurate suggestions.
+
 
 ‘Networks’ should be ‘Ecological networks’ in that same sentence.
 
@@ -229,7 +235,7 @@ The caption of figures 3 and 4 must specify what does each point represent. One
 network? An average of several? It doesn’t look like there are 19000 points
 on that graph, but I might be wrong.
 
-> TODO
+> We now mention that each point represents one network.
 
 The last word of section 4 should be changed to avenue instead of problem.
 
@@ -244,7 +250,7 @@ you should at least rephrase it making the stability thing not the central
 aspect of the consequences of your current work but just another possible
 feature affected by it.
 
-> TODO
+> We expanded upon this point in the revision.
 
 ## Reviewer 3 (Enrico Rezende)
 

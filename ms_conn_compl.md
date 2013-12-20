@@ -208,7 +208,7 @@ each network, we fit a power-law distribution on the sorted degree distribution
 using the least-squares method; we report the power-law exponent.
 
 [simstat]: sim_stats.png "title"
-![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results show that central properties of the degree distribution are contingent upon connectance, at a given network size, and under a given network generation model. ER networks are in blue, niche-model networks are in red.\label{simstat}][simstat]
+![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results show that central properties of the degree distribution are contingent upon connectance, at a given network size, and under a given network generation model. ER networks are in blue, niche-model networks are in red. Each point represent a single generated network.\label{simstat}][simstat]
 
 Qualitatively, the random graphs and the niche networks behave exactly the
 same. With the exception of the kurtosis, *all* statistical descriptors of the
@@ -256,17 +256,18 @@ Randomized null models are often used to estimate how much a given network
 property deviates from its random expectation [@flores_statistical_2011]. Our
 results show two things. First, except for extremely high or low connectance,
 the proportion of the network space that will be explored using $10^3$
-or $10^4$ replicates (typical values in null models analyses) is orders
-of magnitude smaller than the *realized* network space. Although this
-is somewhat compensated by the fact that a part of these networks are
-isomorphic, the risk of inferring deviation from the random expectation
-based on a drastically small sampling of the network space is real, and
-un-addressed. On the other hand, when connectance is high, the number of
-unique network combinations decreases, and there is a risk to generate
-a number of replicates that is larger than the realized network space,
-thus decreasing the information content of the randomizations. To the
-best of our knowledge, these issues have seldom be addressed in the
-literature on ecological network randomization.
+or $10^4$ replicates (typical values in null models analyses) is orders of
+magnitude smaller than the *realized* network space. Although this is somewhat
+compensated by the fact that a part of these networks are isomorphic, the risk
+of inferring deviation from the random expectation based on a drastically small
+sampling of the network space is real, and un-addressed; at the very least,
+it seems that that intensity of the replication should be dependent upon the
+connectance of the network one tries to replicate. On the other hand, when
+connectance is high, the number of unique network combinations decreases,
+and there is a risk to generate a number of replicates that is larger than
+the realized network space, thus decreasing the information content of the
+randomizations. To the best of our knowledge, these issues have seldom be
+addressed in the literature on ecological network randomization.
 
 Second, generating null models with a low connectance is a computationally
 intensive task. When connectance decreases, the *realized* network space
@@ -290,39 +291,51 @@ algorithms is a fruitful research avenue.
 # Conclusions
 
 Connectance is an extremely intuitive property of network, expressing how much
-of the potential interactions are realized. Through statistical reasoning and
-simple simulations using models of random networks, we show that for a given
-number of species, connectance drives (i) how many different networks exist,
-and (ii) some key elements of the degree distribution. We observed both
-among and between model quantitative changes in degree distribution
-along a connectance gradient. The niche model is a particularly striking
-example of this, with the variance in the degree distribution increasing
-50-fold when connectance moves from 0.1 to 0.5. This result has
-practical implications for network comparisons. As descriptors of degree
-distribution vary with connectance, connectance should be factored out
-from all analyses. So as to avoid colinearity issues, this can be done
-by either working on the residuals of the degree distributions' property
-of interest. To some extent, the impact of connectance is lesser in the
-0.05-0.3 range where most empirical food webs lies (although bipartite
-networks can have much higher connectances), but the effect is
-high enough that it should not be ignored: at equal number of species,
-networks with different connectances are expected to have different
+of the potential interactions are realized. Through statistical reasoning
+and simple simulations using models of random networks, we show that for a
+given number of species, connectance drives (i) how many different networks
+exist, and (ii) some key elements of the degree distribution. We observed both
+among and between model quantitative changes in degree distribution along a
+connectance gradient. The niche model is a particularly striking example of
+this, with the variance in the degree distribution increasing 50-fold when
+connectance moves from 0.1 to 0.5. This result has practical implications
+for network comparisons. As descriptors of degree distribution vary with
+connectance, connectance should be factored out from all analyses. So as to
+avoid colinearity issues, this can be done by either working on the residuals
+of the degree distributions' property of interest. To some extent, the impact
+of connectance is lesser in the 0.05-0.3 range where most empirical food webs
+lies (although bipartite networks can have much higher connectances), but
+the effect is high enough that it should not be ignored: at equal number of
+species, networks with different connectances are expected to have different
 degree distributions.
 
-Finally, this analysis raises interesting ecological questions. Early analyses
-focusing on degree distribution argued that ecological mechanisms were
-responsible for the shape of the distribution
+Finally, this analysis raises interesting ecological questions. Early
+analyses focusing on degree distribution argued that ecological
+mechanisms were responsible for the shape of the distribution
 [@vazquez_degree_2005;@fortuna_nestedness_2010;@williams_biology_2011]. In this
-contribution, we show that connectance will impose a lower and higher limit for
-the shape of the degree distribution. Given this information, it is time to
-bring the debate full-circle: is connectance the cause of observed network
-properties, or an emergent property of pairwise species interactions? As the
-later seems far more likely, it now makes sense to focus on why some networks
-deviate, or not, from the expected degree distribution knowing their
-connectance. As the density of interaction plays such a central role in May's
-criteria for stability [@may_will_1972], clarifying how connectance is shaped
-by mechanisms regulating pairwise species interactions offers the opportunity
-of integrating the effects of these mechanisms up to their impact on
-emergent,community-wide properties.
+contribution, we show that connectance will impose a lower and higher limit
+for the shape of the degree distribution. Given this information, it is time
+to bring the debate full-circle: is connectance the cause of observed network
+properties, or an emergent property of pairwise species interactions? As
+the later seems far more likely, it now makes sense to focus on why some
+networks deviate, or not, from the expected degree distribution knowing
+their connectance. As the density of interaction plays such a central role
+in May's criteria for stability [@may_will_1972], clarifying how connectance
+is shaped by mechanisms regulating pairwise species interactions offers the
+opportunity of integrating the effects of these mechanisms up to their impact
+on emergent,community-wide properties. @okuyama_network_2008 showed that in
+mutualistic systems, resilience (to perturbation) is affected both by degree
+network size and interaction strength, but also by the degree distribution
+and connectance of the network; we show here that degree distribution and
+connectance are tightly linked, and alternative approaches to the question
+of resilience can focus on the deviation of degree distribution knowing the
+connectance, rather than the "raw" degree distribution. In keeping with the
+results we present in the first part of the paper, @rozdilsky_complexity_2001
+report that there is a inverted hump-shaped relationship between connectance,
+and the proportion of "feasible and stable" systems, with the lowest proportion
+of such systems being found at $Co \approx 0.5$. This strongly suggests
+that the same mechanisms that limit the *realized* network space may affect
+ecological properties, thus emphasizing the need not to discard connectance
+in profit of more emerging properties in future ecological network analyses.
 
 # References
