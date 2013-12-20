@@ -201,7 +201,8 @@ at least in niche model networks. If this claim is supported by statistical
 tests they should be presented, otherwise it should be clearly stated that
 this is your interpretation of the plot.
 
-> TODO
+> As mentionned above, we added evidences of this claim in the text. The $R^2$
+of the connectance -- kurtosis relationship are below $10^{-1}$ for both models.
 
 Another concern I have, which doesn't have anything to do with the results
 but with their implications is that in section 4 the authors claim that
@@ -349,6 +350,8 @@ aware that this is true, but perhaps the authors should consider another way
 of representing this. One possibility would be to include a substantially
 larger network or include lower connectivities in this figure.
 
+> TODO
+
 p. 12. End of first paragraph. Absolutely. In this paragraph it is worth
 mentioning that this problem is not limited to degree distribution and may
 be pervasive in null models testing for other structural properties. For
@@ -357,3 +360,5 @@ maintaining degree distribution constant (i.e., the fixed row, fixed column
 null model proposed by Gotelli, Ulrich and colleagues). My impression is
 that the realized space is highly constrained (Almeida-Neto et al. 2008
 briefly discuss this in their NODF paper, p. 1232).
+
+> TODO

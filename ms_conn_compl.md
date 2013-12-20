@@ -223,45 +223,53 @@ using the least-squares method; we report the power-law exponent.
 [simstat]: sim_stats.png "title"
 ![Statistical descriptors of the degree distribution of randomized networks, $n=30$, increasing connectance. These results show that central properties of the degree distribution are contingent upon connectance, at a given network size, and under a given network generation model. ER networks are in blue, niche-model networks are in red. Each point represent a single generated network.\label{simstat}][simstat]
 
-Qualitatively, the random graphs and the niche networks behave exactly the
-same. With the exception of the kurtosis, *all* statistical descriptors of the
+Qualitatively, the random graphs and the niche networks behave exactly
+the same. With the exception of the kurtosis, *all* statistical descriptors of the
 degree distribution were influenced by the effective connectance (Fig.
 \ref{simstat}). As predicted in the previous part, variance of the degree
-distribution is hump-shaped with regard to connectance, which implies that as
-average degree increases with connectance, the coefficient of variation of the
-degree distribution decreases at high connectances. Note also that the range of
-variances in the degree distribution is higher at intermediate connectances, but
-lower at the extreme. Due to the fact that the Erdős-Rényi graphs we simulate
-are essentially Poisson random graphs, it is expected that the variance of their
-degree distribution would be lower than for the niche model, which in contrast
-*forces* strong difference in the degree of species according to their niche
-position.
+distribution is hump-shaped with regard to connectance, which implies that
+as average degree increases with connectance, the coefficient of variation
+of the degree distribution decreases at high connectances. Note also that
+the range of variances in the degree distribution is higher at intermediate
+connectances, but lower at the extreme. Due to the fact that the Erdős-Rényi
+graphs we simulate are essentially Poisson random graphs, it is expected
+that the variance of their degree distribution would be lower than for the
+niche model, which in contrast *forces* strong difference in the degree of
+species according to their niche position.
 
-Kurtosis is independent of connectance, while skewness decreases with
-connectance. This result is expected. Positively skewed distribution have
-longer or fatter right tails, indicating mostly low values (low degree):
-unconnected networks are made mostly of species with a weak generality
-[@schoener_food_1989]. On the other hand, negative skewness indicate that
-most of the values in the distribution are high. Ecologically, it means that
-most species are wide-range generalists, which happens in densely connected
-networks. This bears important ecological consequences, as it indicates that
-due to physical constraints acting on the filling of interactions within the
-graphs, networks with intermediate connectances are expected to have species
-with both low and high generality [@schoener_food_1989].
+To quantify the impact of connectance on the different network properties,
+we measured the proportion of variance explained by the linear regression of a
+given property against connectance (in such cases as had a linear relationship
+between  the two, *i.e.* all measures but variance). Kurtosis is independent
+of connectance ($R^2_\text{niche} = 0.04$, $R^2_\text{ER} = 0.06$), while
+skewness decreases with connectance, although more markedly so in the niche
+model ($R^2_\text{niche} = 0.66$, $R^2_\text{ER} = 0.26$). This result is
+expected. Positively skewed distribution have longer or fatter right tails,
+indicating mostly low values (low degree): unconnected networks are made mostly
+of species with a weak generality [@schoener_food_1989]. On the other hand,
+negative skewness indicate that most of the values in the distribution are
+high. Ecologically, it means that most species are wide-range generalists,
+which happens in densely connected networks. This bears important ecological
+consequences, as it indicates that due to physical constraints acting on
+the filling of interactions within the graphs, networks with intermediate
+connectances are expected to have species with both low and high generality
+[@schoener_food_1989]. The coefficientof variation of the degree distribution
+is extremely well predicted by connectance alone ($R^2_\text{niche} = 0.91$,
+$R^2_\text{ER} = 0.87$).
 
 [powerlaw]: sim_power.png "title"
 ![The estimate of the power-law exponent increases with connectance, reaching a flat distribution for complete graphs. \label{powerlaw}][powerlaw] 
 
-The estimate of the power-law exponent increases when connectance increases
-(Fig. \ref{powerlaw}). This indicates that the degree distribution flattens
-when connectance increases. Taken with the elements presented above, we
-show that all of the estimators of the degree distribution vary strongly
-with connectance of the network. Although power-laws should be truncated
-as soon as the probability of a species having a degree of $2\times n$
-(or $n$ in undirected networks) is not negligible, and as such the fitting
-of power-laws should not be done on highly connected networks for practical
-purposes, this result emphasizes the key role of connectance in driving
-central network structure properties.
+The estimate of the power-law exponent increases when connectance
+increases (Fig. \ref{powerlaw}, $R^2_\text{niche} = 0.91$, $R^2_\text{ER} =
+0.70$). This indicates that the degree distribution flattens when connectance
+increases. Taken with the elements presented above, we show that all of the
+estimators of the degree distribution vary strongly with connectance of the
+network. Although power-laws should be truncated as soon as the probability
+of a species having a degree of $2\times n$ (or $n$ in undirected networks)
+is not negligible, and as such the fitting of power-laws should not be done
+on highly connected networks for practical purposes, this result emphasizes
+the key role of connectance in driving central network structure properties.
 
 # Practical consequences
 
