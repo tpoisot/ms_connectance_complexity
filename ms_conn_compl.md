@@ -73,12 +73,25 @@ the generation of random networks in null-model analyses.
 # Statistical argument
 
 Assuming an ecological network made of $n$ species, and assuming undirected
-interactions with no self-edges (*e.g.* no cannibalism), there can be at most
-$M = n(n-1)/2$ interactions in this network, in which case it is a complete
-graph (the results presented below hold qualitatively for both directed graphs,
-and graphs in which self-edges are allowed). We note this maximal number
-of links $M_n$. With this information in hand, it is possible to know the total
-number of possible networks given a number $l$ of interactions.
+interactions with no self-edges (*e.g.* no species can interact with itself),
+there can be at most $M = n(n-1)/2$ interactions in this network, in which
+case it is a complete graph (the results presented below hold qualitatively
+for both directed graphs, and graphs in which self-edges are allowed). We
+note this maximal number of links $M_n$. With this information in hand,
+it is possible to know the total number of possible networks given a number
+$l$ of interactions. Ecologists are often more familiar with networks being
+represented as their adjacency matrix, *i.e.* (with minimal simplifications)
+a matrix with as many rows and columns as there are species, and a 1 at
+the intersection of two species that interact. In an undirected network,
+the existence of an edge between species $A$ and $B$ imply *two* interactions
+(*i.e.* $A \rightarrow B$ and $B \leftarrow A$), and so assuming no self-edges,
+the total number of ones in the adjacency matrix of a complete, undirected
+graph, is $n(n-1)$. Throughout this paper, we represent networks as graphs,
+and not as adjacency matrices. We consider only the situation of unipartite
+networks, *i.e.* that can be represented by a square matrix. While the shape
+of the matrix (*i.e.* the ratio of columns numbers over rows number) will
+have an impact on the results, we conducted preliminary simulations showing
+that the results hold qualitatively in bipartite networks of varying shapes.
 
 If we term $S_n$ the set of all possible $M_n$ edges in a $n$-node network,
 then the number $G_{n,l}$ of possible networks with $l$ links is the number
@@ -337,5 +350,8 @@ of such systems being found at $Co \approx 0.5$. This strongly suggests
 that the same mechanisms that limit the *realized* network space may affect
 ecological properties, thus emphasizing the need not to discard connectance
 in profit of more emerging properties in future ecological network analyses.
+
+**Acknowledgements:** We thank Luis Gilarranz, Miguel Lurgi, and Enrico
+Rezende for comments, and Amael LeSquin for discussions on algebra.
 
 # References

@@ -125,8 +125,7 @@ less all of them should be named, within the text and in the references
 section). For example Dunne et al. 2002a. Please check all references and
 ensure they comply with this.
 
-> We appreciate the comment. We think this is a very minor detail, of which
-we will take care if the paper is eventually accepted.
+> We used a `csl` style that conforms to *PeerJ* requirements.
 
 As a general comment, perhaps for future occasions, please enumerate the lines
 within each page of the manuscript. This makes easy the reviewing process.
@@ -302,6 +301,15 @@ to estimate the number of different network structures). In my opinion,
 directed matrices that distinguish species roles in rows vs columns are
 mathematically more tractable (e.g., M = rows x columns interactions).
 
+> We really appreciate this discussion. Representing a two-system species
+with an undirected interaction does indeed require a matrix with two ones
+(*i.e.* `matrix(c(0,1,1,0),ncol=2)`), but a single interaction in a *graph*
+object. Adjacency of incidence matrices are (in our opinion) *representations*
+of the graph, and our argument (and simulations) work on graphs rather than
+matrices. That being said, we now realize this is an important distinction
+to make, and we have added an explanation at the end of the first paragraph
+of *"Statistical argument"*.
+
 Even though one would expect results to be qualitatively under more complex
 scenarios, it is important to highlight and discuss other factors that are
 also relevant. Perhaps a major factor that is worth considering (and perhaps
@@ -310,6 +318,13 @@ size (rows x columns), squared matrices are expected to provide the highest
 degrees of freedom. For highly assymetrical networks in which the number
 of rows and columns differ considerably, the number of combinatorials and
 overall degree distribution is expected to be substantially lower.
+
+> This is true, although we made preliminary simulations showing that these
+results hold *qualitatively* for bipartite networks. These come with added
+features that reduce maximal tractability (*i.e.* the expression of the
+solutions change depending on whether the number of species at each level
+is odd or even). We added a mention of this in the first paragraph of
+*"Statistical argument"*.
 
 p. 4. Sentence starting with “If one node is removed from network...”: Is the
 equation correct? The term in the denominator (n – (n – 1)!) can be negative,
