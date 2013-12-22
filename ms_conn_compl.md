@@ -161,7 +161,7 @@ with connectance, and the size of the realized network space becomes closer to
 the size of the total network space when connectance increases.
 
 [anaspace]: ana_space.png "Image Title"
-![Size of the total and realized network space for $n = 10$. As predicted in the main text, (1) the size of network spaces peaks at $Co = 1/2$, and (2) the size of the realized network space becomes asymptotically closer to the size of the total network space when connectance increases. \label{anaspace}][anaspace]
+![Size of the total and realized network space for $n = 6$. As predicted in the main text, (1) the size of network spaces peaks at $Co = 1/2$, and (2) the size of the realized network space becomes asymptotically closer to the size of the total network space when connectance increases. \label{anaspace}][anaspace]
 
 In Fig. \ref{anaratio}, we show that regardless of the network size, the
 relative size of the realized network space increases with connectance. The
@@ -288,7 +288,18 @@ connectance is high, the number of unique network combinations decreases,
 and there is a risk to generate a number of replicates that is larger than
 the realized network space, thus decreasing the information content of the
 randomizations. To the best of our knowledge, these issues have seldom be
-addressed in the literature on ecological network randomization.
+addressed in the literature on ecological network randomization. Another
+problem that might be considered is that some, but not all, of these graphs
+will be isomorphics. For example, although there are five ways to distribute
+two edges between three nodes (assuming undirected edges), all five graphs
+can be perfectly matched to one another. This will not be the case in more
+complex networks, *i.e.* with more nodes and intermediate connectance. The
+consequence of this is that even though it may be possible to generate a large
+number of randomized networks, in a context where species identity do not
+matter (which is often the case in null model analyses in ecology), several of
+these "replicates" can actually be the same, and thus the power of null model
+analyses at connectances where the network space is increasingly constrained
+(*i.e.* extremely high and low connectances) should be carefully evaluated.
 
 Second, generating null models with a low connectance is a computationally
 intensive task. When connectance decreases, the *realized* network space

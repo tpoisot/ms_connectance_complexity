@@ -350,7 +350,9 @@ aware that this is true, but perhaps the authors should consider another way
 of representing this. One possibility would be to include a substantially
 larger network or include lower connectivities in this figure.
 
-> TODO
+> We have re-drawn this figure to make the result more apparent. For reasons
+mentionned in reply to the following point, increasing the size of the graph
+would actually *decrease* the legibility of the results.
 
 p. 12. End of first paragraph. Absolutely. In this paragraph it is worth
 mentioning that this problem is not limited to degree distribution and may
@@ -361,4 +363,11 @@ null model proposed by Gotelli, Ulrich and colleagues). My impression is
 that the realized space is highly constrained (Almeida-Neto et al. 2008
 briefly discuss this in their NODF paper, p. 1232).
 
-> TODO
+> This is tue, and even though the relationship between the total network
+space and the connectance is hump-shaped, we expect that there will be less
+*unique* (*i.e.* non-isomorphic graphs) for any given connectance; *e.g.*, all
+"linear" chains will be isomorhpic, but not all networks with an intermediate
+connectance will be. In situations where the identity of species do not matter
+(such as, for example, testing the nestedness or modularity of a network),
+this might prove a problem. We have added a few sentences on the "Practical
+consequences" section.

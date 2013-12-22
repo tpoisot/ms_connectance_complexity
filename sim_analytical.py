@@ -13,9 +13,9 @@ def R(n,l):
   reali = total - n * C(M(n-1), l)
   return np.array([l/float(M(n)), total, reali])
 
-n = 10
+n = 6
 
-l_iter = xrange(n+2, M(n)+1)
+l_iter = xrange(0, M(n)+1)
 res_store = np.zeros((len(l_iter), 3))
 
 pos = 0
