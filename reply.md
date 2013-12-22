@@ -4,8 +4,8 @@
 
 ### Basic reporting
 
-A number of idiomatic and grammatical errors, most only irritating (e.g “a
-given note have a degree”), but sometimes they do compromise clarity.
+A number of idiomatic and grammatical errors, most only irritating (e.g a
+given note have a degree), but sometimes they do compromise clarity.
 
 > As non-native english speakers, we apologize for our imperfect English being
 "irritating" at places. We have done our best to correct these mistakes,
@@ -286,7 +286,7 @@ This work involves presumably with the simplest of all possible scenarios
 fact can be considerably confusing for most ecologists because, from a
 biolgical point of view, interactions always have a direction (which is
 defined a priori by the species position in rows vs columns). For example,
-in the first sentence of point 2 – Statistical argument, the authors claim
+in the first sentence of point 2 - Statistical argument, the authors claim
 that self-edges correspond to canibalism. However, canibalism and trophic
 interactions imply a direction (someone eats and someone get eaten).
 
@@ -327,19 +327,19 @@ solutions change depending on whether the number of species at each level
 is odd or even). We added a mention of this in the first paragraph of
 *"Statistical argument"*.
 
-p. 4. Sentence starting with “If one node is removed from network...”: Is the
-equation correct? The term in the denominator (n – (n – 1)!) can be negative,
-which should not be the case in combinatorials. Shouldn’t it be only (n!/(n
-– 1)!)? Please double check.
+p. 4. Sentence starting with "If one node is removed from network...": Is the
+equation correct? The term in the denominator (n - (n - 1)!) can be negative,
+which should not be the case in combinatorials. Shouldn't it be only (n!/(n
+- 1)!)? Please double check.
 
 > This was indeed a typo in the manuscript (the closing parenthesis was not
 where it should). The correct formula is now in the text.
 
-p. 4 next line: Remove closing parenthesis in “which further simplifies to n”.
+p. 4 next line: Remove closing parenthesis in "which further simplifies to n".
 
 > This one is actually needed.
 
-p. 4. In sentence “with at least one node of null degree”, close parenthesis.
+p. 4. In sentence "with at least one node of null degree", close parenthesis.
 
 > Fixed.
 
